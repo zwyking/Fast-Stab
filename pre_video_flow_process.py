@@ -473,25 +473,7 @@ if __name__ == "__main__":
                 img_orig_target_vrbl_stable = img_orig_target_vrbl_stable.numpy()
                 img_target_crop, _, _ = random_crop(img_orig_target_vrbl_stable, (1280, 720), (0, 0))
                 img_target_crop = img_target_crop.astype(np.uint8)
-                # axis[4][4].imshow(img_target_crop)
                 
-
-                # for fr_id in range(weight_map_softmax.shape[0]):
-                #     s_img = source_img[fr_id, ...]
-                #     axis[fr_id][0].imshow(s_img)
-                #     axis[fr_id][0].set_title("source_image")
-                #     t_img = target_img[fr_id, ...]
-                #     axis[fr_id][1].imshow(t_img)
-                #     axis[fr_id][1].set_title("target_image")
-
-                #     warp_source = remap_using_flow_fields(s_img, flow_est[fr_id,:,:,0], flow_est[fr_id,:,:,1])
-                #     # w = weight_map_softmax[fr_id, :, :, 0].detach().cpu().numpy()
-                #     axis[fr_id][2].imshow(warp_source)
-                #     axis[fr_id][2].set_title("warp_image")
-
-                #     p = p_r[fr_id].squeeze().detach().cpu().numpy()
-                #     axis[fr_id][3].imshow(p)
-                #     axis[fr_id][3].set_title("p_r")
                 
                 p_r = p_r.squeeze().detach().cpu().numpy()
                 p_r_save = p_r.copy()
@@ -504,17 +486,7 @@ if __name__ == "__main__":
                     p_r_save[idx - 1] = pr_new
                     p_r[idx - 1] = warp_pr_fron
 
-                    # axis[idx - 1][4].imshow(pr_new)
-                    # axis[idx - 1][4].set_title("warp_p_r")
                 save_data[video_number + '_' + str(id)]["conf_map"].append(p_r_save)
-
-                # axis[4][0].plot(640, 360, "+", markersize=15)
-                # axis[4][1].plot(640 + tx_frame, 360 + ty_frame, "+", markersize=15)
-                # fig.tight_layout()
-                # fig.savefig("test.jpg")
-                # plt.close(fig)
-
-
 
     with open(out_file_name, "wb") as ofp:
         pickle.dump(save_data, ofp)

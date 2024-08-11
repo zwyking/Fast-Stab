@@ -6,3 +6,6 @@ You can run ```python assets/save_training_video_to_disk.py``` to prepare your s
 
 * # Generate Confidence Maps
 You can run ``pre_video_flow_process.py`` to generate a confidence map sequence for the input video. Before running, please prepare the ``PDCNet`` code and make sure it runs successfully.
+
+* # Core model codes
+You can find the code for the network model corresponding to the paper in the cord_model ```core_model```, including ```model.py```, ```dataset.py```, and ```loss.py```, etc.

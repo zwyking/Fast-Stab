@@ -12,3 +12,10 @@ You can find the code for the network model corresponding to the paper in the ``
 
 * # Citation
 If you find this code helpful, please cite:
+``` @inproceedings{zhao2023fast,
+  title={Fast full-frame video stabilization with iterative optimization},
+  author={Zhao, Weiyue and Li, Xin and Peng, Zhan and Luo, Xianrui and Ye, Xinyi and Lu, Hao and Cao, Zhiguo},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={23534--23544},
+  year={2023}
+}```

@@ -11,3 +11,4 @@ You can run ``pre_video_flow_process.py`` to generate a confidence map sequence 
 You can find the code for the network model corresponding to the paper in the ```core_model``` folder, including ```model.py```, ```dataset.py```, and ```loss.py```, etc.
 
 * # Citation
+If you find this code helpful, please cite:
